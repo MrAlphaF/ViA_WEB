@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
+}
+
+a {
+    text-decoration: none; /* Remove underlines from navigation bar hyperlinks */
+}
+
+body {
+    background-color: black;
+}
+
+nav > a {
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    transition: 0.2s;
+    color: white;
+}
+
+nav > a:hover {
+    background-color: rgb(84, 84, 84);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: dodgerblue;
+    padding: 10px;
+}
+
+/* Styling for grid cells */
+.grid-container > div {
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar {
+    grid-column: 1 / 4; /* Make navigation bar go from 1st to 3rd column in grid layout */
+}
+
+.heroSection {
+    grid-column: 1 / 4;
+}
+
+.footer {
+    grid-column: 1 / 4; /* Make footer go from 1st to 3rd column in grid layout */
+}
