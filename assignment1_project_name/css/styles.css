@@ -75,6 +75,15 @@ nav > a:hover {
     grid-column: 1 / 4; /* Make navigation bar and other stuff stretch from 1st to 3rd column in grid layout */
 }
 
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
 .aboutPerson {
     min-height: 5em;
     line-height: 1.3;
