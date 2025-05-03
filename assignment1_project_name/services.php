@@ -14,6 +14,12 @@
     <title>Services</title>
 </head>
 <body>
+        
+    <?php
+        include_once "includes/setup.php";
+        include_once "includes/db.php";
+    ?>
+
     <div class="grid-container">
         <!-- Navbar -->
         <div class="navbar navbar-expand-md">
@@ -22,10 +28,10 @@
               </button>
             <div id="collapseNav" class="collapse navbar-collapse" onscroll="changeNavbarClasslist(this)">
                 <nav id="navbarCollapsible" class="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="index.php">Home</a>
+                    <a href="about.php">About Us</a>
+                    <a href="services.php">Services</a>
+                    <a href="contact.php">Contact Us</a>
                     <a href="#"><img id="loginIcon" src="images/login_icon.png"> Log In</a>
                     <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png"></button>
                 </nav>

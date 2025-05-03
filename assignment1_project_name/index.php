@@ -14,6 +14,12 @@
     <title>Home</title>
 </head>
 <body>
+        
+    <?php
+        include_once "includes/setup.php";
+        include_once "includes/db.php";
+    ?>
+
     <div class="grid-container">
         <div class="navbar navbar-expand-md">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +27,10 @@
               </button>
             <div id="collapseNav" class="collapse navbar-collapse" onscroll="changeNavbarClasslist(this)">
                 <nav id="navbarCollapsible" class="navbar navbar-expand-lg navbar-light">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="index.php">Home</a>
+                    <a href="about.php">About Us</a>
+                    <a href="services.php">Services</a>
+                    <a href="contact.php">Contact Us</a>
                     <a href="#"><img id="loginIcon" src="images/login_icon.png"> Log In</a>
                     <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png"></button>
                 </nav>
@@ -37,7 +43,7 @@
                 <div class="col-md-8">
                     <h1 class="display-4">Welcome to PC Fix & Build</h1>
                     <p class="lead">Your trusted partner in PC and laptop repair and custom builds.</p>
-                    <a href="services.html" class="btn btn-primary mt-3">Discover Our Services</a>
+                    <a href="services.php" class="btn btn-primary mt-3">Discover Our Services</a>
                     <br><br>
                     <img src="images/repair.jpg" id="heroImage" class="img-fluid mt-3">
                 </div>
