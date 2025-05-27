@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/classes/Service.php'; // Make sure Service class is available
 
-/
 $serviceManager = null;
 $services_result = null;
 $searchTerm = null;

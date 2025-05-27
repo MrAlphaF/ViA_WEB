@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $alert_message_text_task6 = "Please correct the following errors:<br>" . implode("<br>", $server_errors_task6);
         $alert_message_type_task6 = 'danger';
     }
-    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

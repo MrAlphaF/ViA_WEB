@@ -6,7 +6,7 @@ class Service {
 
     
     
-    @param mysqli 
+    // @param mysqli 
      
     public function __construct($db_mysqli) {
         $this->conn_mysqli = $db_mysqli;
@@ -35,7 +35,7 @@ class Service {
             return false;
         }
 
-        /
+        
         // The primary protection against SQL injection comes from using prepared statements.
         $title_san = htmlspecialchars(strip_tags($title));
         $desc_san = htmlspecialchars(strip_tags($desc));
@@ -108,7 +108,7 @@ class Service {
         $stmt->close(); 
         
         return $result; 
-
+    }
     /**
      * Read a single service by its ID.
      *
