@@ -78,11 +78,11 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                     <a href="about.php">About Us</a>
                     <a href="services.php">Services</a>
                     <a href="contact.php">Contact Us</a>
-                    <a href="#"><img id="loginIcon" src="images/login_icon.png" alt="Login Icon"> Log In</a> {/* Added alt text */}
-                    <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png" alt="Dark Mode Icon"></button> {/* Added alt text */}
+                    <a href="#"><img id="loginIcon" src="images/login_icon.png" alt="Login Icon"> Log In</a>
+                    <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png" alt="Dark Mode Icon"></button>
                     
                     <!-- SERVER-SIDE SEARCH FORM  -->
-                    <form class="form-inline my-2 my-lg-0" action="services.php" method="GET" style="margin-left: auto;"> {/* Bootstrap 4 style for right align within nav items */}
+                    <form class="form-inline my-2 my-lg-0" action="services.php" method="GET" style="margin-left: auto;">
                         <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Services" aria-label="Search" value="<?php echo htmlspecialchars($searchTerm ?? ''); ?>">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
@@ -121,7 +121,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                             elseif (stripos($service['title'], 'upgrade') !== false) { $data_category_attr = 'upgrade';}
                         ?>
                         <div class="col-12 col-md-4 service-card" data-category="<?php echo $data_category_attr; ?>">
-                            <div class="card"> {/* Your existing card structure */}
+                            <div class="card">
                                 <?php
                                     // Image display logic
                                     $image_to_display = "images/repair.jpg"; // Default image
@@ -137,7 +137,10 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                                         <?php
                                             $description_text = htmlspecialchars($service['description'] ?? ''); // Added null coalescing for safety
                                             echo strlen($description_text) > 120 ? substr($description_text, 0, 117) . '...' : $description_text;
+                                            echo "<br><img style='width:30%' src=".$image_to_display.">";
                                         ?>
+
+
                                     </p>
                                 </div>
                             </div>

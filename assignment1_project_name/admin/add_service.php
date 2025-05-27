@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <footer class="text-center mt-5 py-3 bg-light">
-        <p>© <?php echo date("Y"); ?> Your Company - Admin Panel</p>
+        <p>© <?php echo date("Y"); ?> PC Fix & Build - Admin Panel</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

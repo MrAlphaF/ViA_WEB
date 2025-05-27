@@ -115,7 +115,7 @@ $services_result = $serviceManager->readAll();
     </div>
 
     <footer class="text-center mt-5 py-3 bg-light">
-        <p>© <?php echo date("Y"); ?> Your Company - Admin Panel</p>
+        <p>© <?php echo date("Y"); ?> PC Fix & Build - Admin Panel</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
