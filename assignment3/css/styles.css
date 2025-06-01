@@ -170,3 +170,13 @@ nav > a:hover {
 .darkMode {
     background-color: black;
 }
+
+#lastLogin {
+    background-color: rgb(166, 255, 166);
+    border: 3px solid rgb(0, 56, 0);
+    border-radius: 2px;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 0.1em; 
+    padding-bottom: 0.1em;
+}
