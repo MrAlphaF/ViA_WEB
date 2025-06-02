@@ -1,5 +1,3 @@
-<<<<<<< HEAD:assignment1_project_name/services.php
-=======
 <?php
 
 session_start();
@@ -20,7 +18,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
 
 // The actual fetching of services will happen after $conn is established.
 ?>
->>>>>>> release/1.3:assignment3/services.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +32,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Services</title>
-<<<<<<< HEAD:assignment1_project_name/services.php
-=======
     <style>
        
         .dynamic-card-img {
@@ -57,15 +52,10 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
             justify-content: space-between;
         }
     </style>
->>>>>>> release/1.3:assignment3/services.php
 </head>
 <body>
         
     <?php
-<<<<<<< HEAD:assignment1_project_name/services.php
-        include_once "includes/setup.php";
-        include_once "includes/db.php";
-=======
         
         if (isset($conn)) { // Check if $conn is actually set
             $serviceManager = new Service($conn); // Pass the MySQLi connection
@@ -75,7 +65,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
             echo "<p class='text-danger text-center'>Error: Database connection not available. Service data cannot be loaded.</p>";
             // $services_result will remain null or false
         }
->>>>>>> release/1.3:assignment3/services.php
     ?>
 
     <div class="grid-container">
@@ -90,11 +79,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                     <a href="about.php">About Us</a>
                     <a href="services.php">Services</a>
                     <a href="contact.php">Contact Us</a>
-<<<<<<< HEAD:assignment1_project_name/services.php
-                    <a href="register.php">Sign Up</a>
-                    <a href="login.php"><img id="loginIcon" src="images/login_icon.png"> Log In</a>
-                    <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png"></button>
-=======
 
                     <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
                         <?php if ($_SESSION['username'] == 'admin') 
@@ -113,7 +97,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                         <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Services" aria-label="Search" value="<?php echo htmlspecialchars($searchTerm ?? ''); ?>">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
->>>>>>> release/1.3:assignment3/services.php
                 </nav>
             </div>
         </div>
@@ -133,37 +116,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
         <!-- Services Section -->
         <div class="servicesSection">
             <h2>Our Services</h2>
-<<<<<<< HEAD:assignment1_project_name/services.php
-            <hr>
-            <div class="row" id="servicesList">
-                <!-- Service Cards (Initially Visible) -->
-                <div class="col-12 col-md-4 service-card" data-category="repair">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">PC & Laptop Repairs</h3>
-                            <p class="card-text">From broken screens to overheating issues, we fix all major brands.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4 service-card" data-category="build">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Custom PC Builds</h3>
-                            <p class="card-text">Gaming, workstation, and budget-friendly custom builds tailored to your needs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4 service-card" data-category="upgrade">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Hardware & Software Upgrades</h3>
-                            <p class="card-text">Boost performance with RAM, SSD, GPU, and software optimizations.</p>
-                        </div>
-                    </div>
-                </div>
-=======
             <?php if ($searchTerm && isset($conn)): // Show search term only if DB connection was available ?>
                 <p class="lead text-center">Showing results for: <strong>"<?php echo htmlspecialchars($searchTerm); ?>"</strong></p>
             <?php endif; ?>
@@ -220,7 +172,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                 <?php if (!isset($conn)): ?>
                     {/* This message is now shown where $conn is checked earlier if it's more appropriate there */}
                 <?php endif; ?>
->>>>>>> release/1.3:assignment3/services.php
             </div>
         </div>
 
@@ -230,37 +181,6 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
         </div>
     </div>
 
-<<<<<<< HEAD:assignment1_project_name/services.php
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <script>
-        // Get the dropdown element
-        const serviceFilter = document.getElementById('serviceFilter');
-        const servicesList = document.getElementById('servicesList');
-        
-        // Event listener to filter services dynamically
-        serviceFilter.addEventListener('change', function() {
-            const selectedCategory = serviceFilter.value;
-
-            // Get all service cards
-            const serviceCards = document.querySelectorAll('.service-card');
-
-            // Use filter to show/hide services based on category
-            serviceCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                if (selectedCategory === "" || category === selectedCategory) {
-                    card.style.display = "block";  // Show matching service
-                } else {
-                    card.style.display = "none";   // Hide non-matching service
-                }
-            });
-        });
-    </script>
-</body>
-</html>
-=======
     
     <script src="js/script.js"></script>
 
@@ -295,4 +215,3 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
     </script>
 </body>
 </html>
->>>>>>> release/1.3:assignment3/services.php

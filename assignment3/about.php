@@ -1,5 +1,3 @@
-<<<<<<< HEAD:assignment1_project_name/about.php
-=======
 <?php
 session_start();
 
@@ -7,7 +5,6 @@ include_once "includes/setup.php";
 include_once "includes/db.php";
 ?>
 
->>>>>>> release/1.3:assignment3/about.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,14 +22,6 @@ include_once "includes/db.php";
 </head>
 <body>
 
-<<<<<<< HEAD:assignment1_project_name/about.php
-    <?php
-        include_once "includes/setup.php";       
-        include_once "includes/db.php";
-    ?>
-
-=======
->>>>>>> release/1.3:assignment3/about.php
     <div class="grid-container">
         <div class="navbar navbar-expand-md">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,10 +33,6 @@ include_once "includes/db.php";
                     <a href="about.php">About Us</a>
                     <a href="services.php">Services</a>
                     <a href="contact.php">Contact Us</a>
-<<<<<<< HEAD:assignment1_project_name/about.php
-                    <a href="register.php">Sign Up</a>
-                    <a href="login.php"><img id="loginIcon" src="images/login_icon.png"> Log In</a>
-=======
 
                     <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
                         <?php if ($_SESSION['username'] == 'admin') 
@@ -59,7 +44,6 @@ include_once "includes/db.php";
                         <a href="register.php">Register</a>
                     <?php endif; ?>
 
->>>>>>> release/1.3:assignment3/about.php
                     <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png"></button>
                 </nav>
             </div>
