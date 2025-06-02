@@ -55,7 +55,9 @@ $services_result = $serviceManager->readAll();
                 <li class="nav-item">
                     <a class="nav-link" href="add_service.php">Add New Service</a>
                 </li>
-                
+                <li class="nav-item">
+                    <a class="nav-link" href="statistics.php">Site Statistics</a>
+                </li>
             </ul>
             <ul class="navbar-nav">
                  <li class="nav-item"><a class="nav-link" href="../index.php">View Site</a></li>

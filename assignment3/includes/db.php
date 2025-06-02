@@ -1,5 +1,5 @@
 <?php
-    include "classes/database.php";
+    include __DIR__ . "/../classes/database.php";
     // username, password, dbname, servername
     $mydb = new MyDB("root", "", "webdev_project", "localhost");
 

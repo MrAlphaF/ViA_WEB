@@ -3,6 +3,7 @@ session_start();
 
 include_once "includes/setup.php";
 include_once "includes/db.php";
+include_once "includes/stats.php";
 ?>
 
 <!DOCTYPE html>
