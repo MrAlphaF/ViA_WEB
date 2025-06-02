@@ -1,23 +1,32 @@
 <?php
-    // Existing DDL
     $dbsql = "CREATE DATABASE IF NOT EXISTS webdev_project;";
 
-    $servicessql = "CREATE TABLE IF NOT EXISTS services (
-        id int NOT NULL AUTO_INCREMENT,
-        title varchar(255) NOT NULL,
-        description varchar(5000),
-        image varchar(400),
-        PRIMARY KEY (id) 
+    $servicessql = "CREATE TABLE IF NOT EXISTS services 
+    (
+    id int NOT NULL AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
+    description varchar(5000),
+    image varchar(400),
+    PRIMARY KEY (id) 
     );";
 
-    $userssql = "CREATE TABLE IF NOT EXISTS users (
-        id int NOT NULL AUTO_INCREMENT,
-        username varchar(255) NOT NULL UNIQUE,
-        email varchar(255) NOT NULL UNIQUE,
-        password varchar(255) NOT NULL,
-        PRIMARY KEY (id)
+    $userssql = "CREATE TABLE IF NOT EXISTS users 
+    (
+    id int NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD:assignment1_project_name/includes/setup.php
+    username varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+=======
+    username varchar(255) NOT NULL UNIQUE,
+    email varchar(255) NOT NULL UNIQUE,
+>>>>>>> release/1.3:assignment3/includes/setup.php
+    password varchar(255) NOT NULL,
+    PRIMARY KEY (id)
     );";
 
+<<<<<<< HEAD:assignment1_project_name/includes/setup.php
+=======
+    // Added for Task 6.3
     $messagessql = "CREATE TABLE IF NOT EXISTS messages (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -26,51 +35,25 @@
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );";
 
-    // New DDL for page_views table
-    $pageviewssql = "CREATE TABLE IF NOT EXISTS page_views (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        page_name VARCHAR(255) NOT NULL UNIQUE,
-        view_count INT NOT NULL DEFAULT 0,
-        last_viewed TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    );";
-    // END New DDL
-
+>>>>>>> release/1.3:assignment3/includes/setup.php
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db = "webdev_project"; // Database name
+    $db = "webdev_project";
     
-    // Create connection
     $conn = new mysqli($servername, $username, $password);
     
-    // Check connection
-    if ($conn->connect_error) { 
-      die("Connection failed: " . $conn->connect_error);
+    if (!$conn) {
+      die("Connection died: " . mysqli_connect_error());
     }
 
-    
-    if (!$conn->query($dbsql)) {
-        // Optionally handle error, but usually IF NOT EXISTS is fine
-    }
-    
-    // Select the database
-    if (!$conn->select_db($db)) {
-        die("Database selection failed: " . $conn->error);
-    }
-
-    
-    if (!$conn->query($userssql)) {
-       
-    }
-    if (!$conn->query($servicessql)) {
-        
-    }
-    if (!$conn->query($messagessql)) {
-        
-    }
-    if (!$conn->query($pageviewssql)) { 
-        
-    }
-
+    $conn->query($dbsql);
+    $conn->select_db($db);
+    $conn->query($userssql);
+    $conn->query($servicessql);
+<<<<<<< HEAD:assignment1_project_name/includes/setup.php
+=======
+    $conn->query($messagessql); // Added for Task 6.3
+>>>>>>> release/1.3:assignment3/includes/setup.php
 
 ?>
