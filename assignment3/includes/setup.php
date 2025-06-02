@@ -13,19 +13,12 @@
     $userssql = "CREATE TABLE IF NOT EXISTS users 
     (
     id int NOT NULL AUTO_INCREMENT,
-<<<<<<< HEAD:assignment1_project_name/includes/setup.php
-    username varchar(255) NOT NULL,
-    email varchar(255) NOT NULL,
-=======
     username varchar(255) NOT NULL UNIQUE,
     email varchar(255) NOT NULL UNIQUE,
->>>>>>> release/1.3:assignment3/includes/setup.php
     password varchar(255) NOT NULL,
     PRIMARY KEY (id)
     );";
 
-<<<<<<< HEAD:assignment1_project_name/includes/setup.php
-=======
     // Added for Task 6.3
     $messagessql = "CREATE TABLE IF NOT EXISTS messages (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +28,6 @@
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );";
 
->>>>>>> release/1.3:assignment3/includes/setup.php
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -51,9 +43,6 @@
     $conn->select_db($db);
     $conn->query($userssql);
     $conn->query($servicessql);
-<<<<<<< HEAD:assignment1_project_name/includes/setup.php
-=======
     $conn->query($messagessql); // Added for Task 6.3
->>>>>>> release/1.3:assignment3/includes/setup.php
 
 ?>

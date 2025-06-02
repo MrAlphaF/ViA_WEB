@@ -1,5 +1,3 @@
-<<<<<<< HEAD:assignment1_project_name/contact.php
-=======
 <?php
 
 session_start();
@@ -38,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
->>>>>>> release/1.3:assignment3/contact.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-<<<<<<< HEAD:assignment1_project_name/contact.php
-
-=======
     
->>>>>>> release/1.3:assignment3/contact.php
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -59,10 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
         
     <?php
-<<<<<<< HEAD:assignment1_project_name/contact.php
-        include_once "includes/setup.php";
-        include_once "includes/db.php";
-=======
         
         // PHP Database Interaction for Task 6 
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && empty($server_errors_task6)) {
@@ -92,29 +81,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $alert_message_type_task6 = 'danger';
             }
         }
->>>>>>> release/1.3:assignment3/contact.php
     ?>
 
     <div class="grid-container">
         <div class="navbar navbar-expand-md">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-<<<<<<< HEAD:assignment1_project_name/contact.php
-            </button>
-            <div id="collapseNav" class="collapse navbar-collapse">
-=======
               </button>
             <div id="collapseNav" class="collapse navbar-collapse" onscroll="changeNavbarClasslist(this)">
->>>>>>> release/1.3:assignment3/contact.php
                 <nav id="navbarCollapsible" class="navbar navbar-expand-lg navbar-light">
                     <a href="index.php">Home</a>
                     <a href="about.php">About Us</a>
                     <a href="services.php">Services</a>
                     <a href="contact.php">Contact Us</a>
-<<<<<<< HEAD:assignment1_project_name/contact.php
-                    <a href="register.php">Sign Up</a>
-                    <a href="login.php"><img id="loginIcon" src="images/login_icon.png"> Log In</a>
-=======
 
                     <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
                         <?php if ($_SESSION['username'] == 'admin') 
@@ -126,23 +105,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <a href="register.php">Register</a>
                     <?php endif; ?>
 
->>>>>>> release/1.3:assignment3/contact.php
                     <button id="darkmodebutton" onclick="toggleDarkMode()"><img id="darkmodeicon" src="images/dark-mode.png"></button>
                 </nav>
             </div>
         </div>
-<<<<<<< HEAD:assignment1_project_name/contact.php
-        <div class="contactForm">
-            <h2>Contact Us</h2>
-            <form id="contactForm"> <div id="errorContainer"></div> <label for="name">Full Name</label>
-                <input class="form-control" type="text" id="name" name="name" required>
-                <br><br>
-                <label for="email">E-mail</label>
-                <input class="form-control" type="email" id="email" name="email" required>
-                <br><br>
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" required></textarea><br>
-=======
 
         <?php // Bootstrap Alert Display for Task 6.4
         if (!empty($alert_message_text_task6)): ?>
@@ -164,7 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <br><br>
                 <label for="message">Message</label>
                 <textarea class="form-control" id="message" name="message" required><?php echo htmlspecialchars($form_message_task6);?></textarea><br>
->>>>>>> release/1.3:assignment3/contact.php
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
@@ -179,8 +144,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
     <script src="js/script.js"></script>
-<<<<<<< HEAD:assignment1_project_name/contact.php
-=======
     
     <?php // Client-side JavaScript for Task 6.2 ?>
     <script>
@@ -238,6 +201,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
->>>>>>> release/1.3:assignment3/contact.php
 </body>
 </html>
