@@ -4,6 +4,7 @@ session_start();
 
 // Include your database connection file
 require_once 'includes/db.php'; // Using require_once for critical dependencies
+include_once "includes/stats.php";
 // No need to include setup.php here, it's for table creation, not application logic
 
 // Initialize variables to store form data and error messages

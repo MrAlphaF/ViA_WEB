@@ -28,6 +28,14 @@
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );";
 
+    //Added for LPW
+    $statssql = "CREATE TABLE IF NOT EXISTS stats (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      page_name VARCHAR(100) NOT NULL,
+      view_count INT NOT NULL,
+      last_viewed TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );";
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -44,5 +52,6 @@
     $conn->query($userssql);
     $conn->query($servicessql);
     $conn->query($messagessql); // Added for Task 6.3
+    $conn->query($statssql); // Added for LPW
 
 ?>

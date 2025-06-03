@@ -8,6 +8,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 }
 
 require_once 'includes/db.php'; // Using require_once for critical dependencies
+include_once "includes/stats.php";
 
 // Initialize variables to store form data and error messages
 $username_or_email = '';

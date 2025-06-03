@@ -4,6 +4,7 @@ session_start();
 
 include_once "includes/setup.php";
 include_once "includes/db.php";
+include_once "includes/stats.php";
 
 require_once __DIR__ . '/classes/Service.php'; // Make sure Service class is available
 

@@ -3,6 +3,7 @@ session_start();
 
 include_once "includes/setup.php";
 include_once "includes/db.php";
+include_once "includes/stats.php";
 
 $welcome_message = "";
 $last_visit_message = "";
